@@ -1,0 +1,35 @@
+{
+  "name": "cookbookery-shared",
+  "version": "1.0.0",
+  "description": "Shared functionality for the Cookbookery App",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sdaconceicao/cookbookery-shared.git"
+  },
+  "keywords": [
+    "cookbookery"
+  ],
+  "author": "Stephen da Conceicao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sdaconceicao/cookbookery-shared/issues"
+  },
+  "homepage": "https://github.com/sdaconceicao/cookbookery-shared#readme",
+  "dependencies": {
+    "axios": "^0.18.0"
+  },
+  "devDependencies": {
+    "axios-mock-adapter": "^1.16.0",
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.3.0",
+    "@babel/plugin-proposal-export-default-from": "^7.0.0",
+    "@babel/plugin-proposal-export-namespace-from": "^7.2.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/runtime": "^7.0.0"
+  }
+}
