@@ -18,8 +18,8 @@ export function get(id){
         })
 }
 
-export function getList(filters){
-    return axios.get('/recipes', filters);
+export function getList(queryString){
+    return axios.get(`/recipes${queryString ? queryString : ''}`);
 }
 
 export function save(data){
