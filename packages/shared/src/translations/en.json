@@ -30,5 +30,7 @@
   "recipe.tags": "Tags",
   "recipe.servingSize": "Serving Size",
   "recipe.remove.title": "Remove Recipe",
-  "recipe.remove.desc": "Are you sure you want to remove this recipe?"
+  "recipe.remove.desc": "Are you sure you want to remove this recipe?",
+  "recipe.navigate.title": "Changes have not been saved",
+  "recipe.navigate.message": "Are you sure you want to continue?"
 }
