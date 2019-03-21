@@ -1,5 +1,7 @@
 import axios from "axios";
 
+import {convertObjectToQueryString} from './api.util';
+
 export function create(data){
     return axios.post('/recipes', data);
 }
@@ -18,8 +20,8 @@ export function get(id){
         })
 }
 
-export function getList(queryString){
-    return axios.get(`/recipes${queryString ? queryString : ''}`);
+export function getList(query){
+    return axios.get(`/recipes${query ? convertObjectToQueryString(query) : ''}`);
 }
 
 export function save(data){
