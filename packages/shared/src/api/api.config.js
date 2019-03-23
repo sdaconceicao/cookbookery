@@ -1,5 +1,5 @@
 import MockAdapter from 'axios-mock-adapter';
-import * as recipesMock from 'Mocks/Recipes.mock';
+import * as recipesMock from '../../mocks/Recipes.mock';
 
 export function apiConfig(client, mockEnabled = false) {
 
