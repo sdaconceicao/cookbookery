@@ -1,9 +1,9 @@
 import MockAdapter from 'axios-mock-adapter';
 import * as recipesMock from '../../mocks/Recipes.mock';
 
-export function apiConfig(client, mockEnabled = false) {
+export function apiConfig(client, baseUrl, mockEnabled = false) {
 
-    client.defaults.baseURL = process.env.REACT_APP_BASE_URL;
+    client.defaults.baseURL = baseUrl;
 
     if (mockEnabled){
         const mock = new MockAdapter(client, {delayResponse: 500});
