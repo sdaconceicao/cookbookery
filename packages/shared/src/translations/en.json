@@ -15,6 +15,7 @@
   "recipes.title": "Recipes",
   "recipes.none": "No recipes found",
   "recipes.found": "{values} recipes found",
+  "recipes.unavailable": "Recipes are unavailble right now",
   "recipes.filters": "Filters",
   "recipe.add": "Add Recipe",
   "recipe.edit": "Edit Recipe",
