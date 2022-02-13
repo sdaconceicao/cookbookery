@@ -1,0 +1,10 @@
+{
+  "name": "cookbookery",
+  "version": "1.0.0",
+  "description": "A web based recipe directory. Built with React and Express",
+  "author": "Stephen da Conceicao <stephen.daconceiao@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
+}
