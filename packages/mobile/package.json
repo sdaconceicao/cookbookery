@@ -9,7 +9,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "cookbookery-shared": "https://github.com/sdaconceicao/cookbookery-shared",
+    "cookbookery-shared": "1.0.0",
     "react": "16.8.3",
     "react-intl": "^2.8.0",
     "react-native": "0.59.1",

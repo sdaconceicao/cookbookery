@@ -10,17 +10,15 @@ A web based recipe directory. Built with React / Express
 
 ## Setup
 
-npm install
+1. lerna boostrap
+2. Copy .env.example files in api/web folders, and rename to .env. See each README.md for details
+3. For local development against the api, postgres must be setup. See api README.md for details
 
 ## Startup
 
-1. npm start - API backend
-2. npm run start:mocks - Mock backend
+- lerna run start - Run against local api, requires postgres db
+- lerna run start:mocks - Run against mock api
 
 ## Testing
 
-npm run test:watch
-
-## Build
-
-npm build
+- lerna run test:watch

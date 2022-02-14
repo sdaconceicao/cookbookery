@@ -11,14 +11,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sdaconceicao/cookbookery-api.git"
+    "url": "git+https://github.com/sdaconceicao/cookbookery.git"
   },
-  "author": "Stephen da Conceicao",
+  "author": "Stephen da Conceicao <stephen.daconceiao@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sdaconceicao/cookbookery-api/issues"
+    "url": "https://github.com/sdaconceicao/cookbookery/issues"
   },
-  "homepage": "https://github.com/sdaconceicao/cookbookery-api#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
     "cors": "^2.8.5",

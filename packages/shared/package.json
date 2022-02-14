@@ -3,22 +3,16 @@
   "version": "1.0.0",
   "description": "Shared functionality for the Cookbookery App",
   "main": "src/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sdaconceicao/cookbookery-shared.git"
+    "url": "git+https://github.com/sdaconceicao/cookbookery.git"
   },
-  "keywords": [
-    "cookbookery"
-  ],
   "author": "Stephen da Conceicao",
   "license": "ISC",
+  "private": true,
   "bugs": {
-    "url": "https://github.com/sdaconceicao/cookbookery-shared/issues"
+    "url": "https://github.com/sdaconceicao/cookbookery/issues"
   },
-  "homepage": "https://github.com/sdaconceicao/cookbookery-shared#readme",
   "dependencies": {
     "axios": "^0.18.0",
     "axios-mock-adapter": "^1.16.0"
