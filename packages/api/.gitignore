@@ -29,6 +29,7 @@
 ######################
 *.log
 *.sql
+!docker/postgres/init.sql
 *.sqlite
 
 # OS generated files #

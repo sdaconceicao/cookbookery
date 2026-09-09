@@ -4,6 +4,9 @@
   "description": "A web based recipe directory. Built with React and Express",
   "author": "Stephen da Conceicao <stephen.daconceiao@gmail.com>",
   "license": "ISC",
+  "scripts": {
+    "bootstrap": "lerna bootstrap -- --legacy-peer-deps"
+  },
   "devDependencies": {
     "lerna": "^4.0.0"
   }

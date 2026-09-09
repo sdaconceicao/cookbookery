@@ -4,7 +4,6 @@ const webpack = require('webpack'),
     HtmlWebpackPlugin = require('html-webpack-plugin'),
     CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin'),
     InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin'),
-    WatchMissingNodeModulesPlugin = require('react-dev-utils/WatchMissingNodeModulesPlugin'),
     CopyWebpackPlugin = require('copy-webpack-plugin'),
     eslintFormatter = require('react-dev-utils/eslintFormatter'),
     getClientEnvironment = require('./env'),
@@ -25,6 +24,7 @@ function getParam(name){
 }
 
 module.exports = {
+    mode: 'development',
     devtool: 'cheap-module-source-map',
     entry: {
         main: main,
@@ -130,11 +130,11 @@ module.exports = {
         ]
     },
     plugins: [
-        new InterpolateHtmlPlugin(env.raw),
         new HtmlWebpackPlugin({
             inject: true,
             template: paths.appHtml,
         }),
+        new InterpolateHtmlPlugin(HtmlWebpackPlugin, env.raw),
         new webpack.DefinePlugin(env.stringified),
         new webpack.DefinePlugin({MOCKS_ENABLED: (process.argv.some(arg => arg.indexOf('mocks=true') > 1 ) || false)}),
         new webpack.HotModuleReplacementPlugin(),
@@ -144,8 +144,7 @@ module.exports = {
             { from: paths.appSrc+'/assets/favicon-16x16.png', to:  paths.appBuild+'/assets/favicon-16x16.png'},
             { from: paths.appSrc+'/assets/favicon-32x32.png', to:  paths.appBuild+'/assets/favicon-32x32.png'},
             { from: paths.appSrc+'/assets/favicon.svg', to:  paths.appBuild+'/assets/favicon.svg'}
-        ]),
-        new WatchMissingNodeModulesPlugin(paths.appNodeModules)
+        ])
     ],
     node: {
         fs: 'empty',
