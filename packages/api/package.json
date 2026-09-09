@@ -9,7 +9,8 @@
     "serve": "node dist/index.js",
     "db:setup": "npx babel-node --presets @babel/preset-env scripts/db.setup.js",
     "docker:up": "docker compose up -d postgres",
-    "docker:down": "docker compose down",    "docker:ps": "docker compose ps",
+    "docker:down": "docker compose down",
+    "docker:ps": "docker compose ps",
     "docker:logs": "docker compose logs",
     "docker:exec": "docker compose exec postgres psql -U cookbookery -d cookbookery"
   },
