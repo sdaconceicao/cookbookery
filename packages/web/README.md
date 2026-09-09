@@ -6,11 +6,14 @@ A web based recipe directory. Built with React
 
 ## Dev Requires
 
-1. [Node 6-14](https://nodejs.org/en/download/)
+1. [Node 24](https://nodejs.org/en/download/)
 
 ## Setup
 
-npm install
+From the repository root:
+
+1. `npm install`
+2. `npm run bootstrap`
 
 ## Startup
 
@@ -23,4 +26,4 @@ npm run test:watch
 
 ## Build
 
-npm build
+npm run build

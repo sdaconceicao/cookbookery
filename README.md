@@ -6,19 +6,20 @@ A web based recipe directory. Built with React / Express
 
 ## Dev Requires
 
-1. [Node 6+](https://nodejs.org/en/download/)
+1. [Node 24](https://nodejs.org/en/download/)
 
 ## Setup
 
-1. lerna boostrap
-2. Copy .env.example files in api/web folders, and rename to .env. See each README.md for details
-3. For local development against the api, postgres must be setup. See api README.md for details
+1. `npm install`
+2. `npm run bootstrap`
+3. `cp packages/web/.env.example packages/web/.env`
+4. Complete the [API setup](packages/api/README.md).
 
 ## Startup
 
-- lerna run start - Run against local api, requires postgres db
-- lerna run start:mocks - Run against mock api
+- `npx lerna run start` — Run against the local API
+- `npx lerna run start:mocks` — Run against the mock API
 
 ## Testing
 
-- lerna run test:watch
+- `npx lerna run test:watch`
