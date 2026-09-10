@@ -14,7 +14,7 @@ allowBuilds:
   "nodemon": false
 
 catalog:
-  "@biomejs/biome": 2.5.10
+  "@biomejs/biome": 2.5.12
   "typescript": 6.0.3
   "vite": 8.2.2
   "vitest": 4.1.11
