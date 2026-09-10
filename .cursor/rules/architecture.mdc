@@ -1,0 +1,9 @@
+---
+description: Cookbookery repository architecture and boundaries
+alwaysApply: true
+---
+
+Read and follow `../../AGENTS.md` and `../../docs/ARCHITECTURE.md`.
+
+Keep database assets in `packages/api`, build new UI in `packages/web-next`, and
+treat the remaining packages as legacy migration sources.

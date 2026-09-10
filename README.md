@@ -1,25 +1,59 @@
 # Cookbookery
 
-## Details
+A web-based recipe directory with an Express API and a frontend currently being
+rebuilt with TanStack Start and Lago.
 
-A web based recipe directory. Built with React / Express
+## Requirements
 
-## Dev Requires
+- Node 24
+- pnpm 11 through Corepack
+- Docker Desktop or Docker Engine with Compose
 
-1. [Node 24](https://nodejs.org/en/download/)
+## Install
 
-## Setup
+```sh
+corepack pnpm install
+```
 
-1. `npm install`
-2. `npm run bootstrap`
-3. `cp packages/web/.env.example packages/web/.env`
-4. Complete the [API setup](packages/api/README.md).
+## Local development
 
-## Startup
+Prepare PostgreSQL and the API:
 
-- `npx lerna run start` — Run against the local API
-- `npx lerna run start:mocks` — Run against the mock API
+```sh
+cp packages/api/.env.example packages/api/.env
+pnpm --filter cookbookery-api docker:up
+pnpm --filter cookbookery-api db:setup
+```
 
-## Testing
+Run the API and replacement frontend in separate terminals:
 
-- `npx lerna run test:watch`
+```sh
+pnpm dev:api
+pnpm dev:web
+```
+
+- API: `http://localhost:6001`
+- Replacement frontend: `http://localhost:3003`
+
+The replacement frontend is currently a foundation shell; recipe features will
+move from the legacy frontend in vertical slices.
+
+## Quality checks
+
+```sh
+pnpm ci
+```
+
+This runs Biome, TypeScript, Vitest coverage, and production builds.
+
+## Legacy clients
+
+The existing web and mobile clients remain migration references. To run the
+legacy web client, copy `packages/web/.env.example` to `packages/web/.env`, then
+run `pnpm --filter cookbookery-web start`.
+
+## Documentation
+
+- [Architecture](docs/ARCHITECTURE.md)
+- [API and database setup](packages/api/README.md)
+- [Replacement frontend](packages/web-next/README.md)

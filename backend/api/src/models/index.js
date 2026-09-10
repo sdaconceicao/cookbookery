@@ -1,5 +1,5 @@
 import Sequelize from 'sequelize';
-import {getModels} from "../helpers/models";
+import {getModels} from "../helpers/models.js";
 
 const env = process.env.NODE_ENV || "development",
     config = require('../../config/sequelize.config.js')[env],
