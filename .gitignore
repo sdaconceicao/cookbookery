@@ -2,14 +2,13 @@
 /build
 /dist
 **/dist
-/node_modules
+node_modules/
 /.pnpm-store
 /coverage
 **/coverage
 **/.output
 .idea
 .DS_Store
-/packages/*/node_modules
 lerna-debug.log
 npm-debug.log
 cypress/videos/**/*.mp4
