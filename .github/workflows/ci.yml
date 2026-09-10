@@ -14,20 +14,8 @@ concurrency:
 
 jobs:
   checks:
-    name: ${{ matrix.name }}
+    name: Quality, Types, Tests, and Build
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        include:
-          - name: Quality
-            command: check
-          - name: Types
-            command: typecheck
-          - name: Tests
-            command: test:coverage
-          - name: Build
-            command: build
 
     steps:
       - name: Checkout
@@ -43,7 +31,21 @@ jobs:
           cache: pnpm
 
       - name: Install dependencies
+        id: install
         run: pnpm install --frozen-lockfile
 
-      - name: Run ${{ matrix.name }}
-        run: pnpm ${{ matrix.command }}
+      - name: Quality
+        if: ${{ always() && steps.install.outcome == 'success' }}
+        run: pnpm check
+
+      - name: Types
+        if: ${{ always() && steps.install.outcome == 'success' }}
+        run: pnpm typecheck
+
+      - name: Tests
+        if: ${{ always() && steps.install.outcome == 'success' }}
+        run: pnpm test:coverage
+
+      - name: Build
+        if: ${{ always() && steps.install.outcome == 'success' }}
+        run: pnpm build
