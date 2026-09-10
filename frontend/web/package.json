@@ -5,7 +5,7 @@
   "homepage": ".",
   "dependencies": {
     "axios": "0.18",
-    "bootstrap": "^4.1.1",
+    "bootstrap": "^5.3.8",
     "cookbookery-shared": "workspace:*",
     "copy-webpack-plugin": "^4.6.0",
     "core-js": "^2.6.5",
