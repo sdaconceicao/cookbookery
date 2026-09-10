@@ -1,0 +1,29 @@
+packages:
+  - "backend/*"
+  - "frontend/*"
+  - "shared"
+
+
+allowBuilds:
+  "@parcel/watcher": false
+  "@scarf/scarf": false
+  "core-js": false
+  "ejs": false
+  "es5-ext": false
+  "fsevents": false
+  "nodemon": false
+
+catalog:
+  "@biomejs/biome": 2.5.10
+  "typescript": 6.0.3
+  "vite": 8.2.2
+  "vitest": 4.1.11
+
+minimumReleaseAgeExclude:
+  - "@code-x/lago"
+  - "sad-shared-components"
+  - '@types/react-dom@19.3.0'
+  - '@types/react@19.3.0'
+  - react-dom@19.3.0
+  - react@19.3.0
+  - scheduler@0.28.0

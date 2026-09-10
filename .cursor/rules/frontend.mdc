@@ -1,0 +1,9 @@
+---
+description: TanStack Start and Lago frontend standards
+globs: packages/web-next/**/*
+alwaysApply: false
+---
+
+Read and follow `../../packages/web-next/AGENTS.md`.
+
+Verify Lago APIs before use and never edit the generated route tree directly.

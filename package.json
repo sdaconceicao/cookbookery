@@ -1,13 +1,20 @@
 {
   "name": "cookbookery",
   "version": "1.0.0",
+  "private": true,
   "description": "A web based recipe directory. Built with React and Express",
   "author": "Stephen da Conceicao <stephen.daconceiao@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "scripts": {
-    "bootstrap": "lerna bootstrap -- --legacy-peer-deps"
+    "build": "pnpm --filter cookbookery-api build && pnpm --filter cookbookery-web-next build",
+    "check": "pnpm --filter cookbookery-web-next check",
+    "typecheck": "pnpm --filter cookbookery-web-next typecheck",
+    "test": "pnpm --filter cookbookery-web-next test",
+    "test:coverage": "pnpm --filter cookbookery-web-next test:coverage",
+    "ci": "pnpm check && pnpm typecheck && pnpm test:coverage && pnpm build"
   },
-  "devDependencies": {
-    "lerna": "^4.0.0"
+  "packageManager": "pnpm@11.3.0",
+  "engines": {
+    "node": ">=24.0.0"
   }
 }

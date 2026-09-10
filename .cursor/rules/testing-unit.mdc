@@ -1,0 +1,7 @@
+---
+description: Vitest and Testing Library standards
+globs: packages/web-next/**/*.test.ts,packages/web-next/**/*.test.tsx
+alwaysApply: false
+---
+
+Read and follow `../../docs/TESTING_UNIT_STANDARDS.md`.
